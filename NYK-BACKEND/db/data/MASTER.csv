@@ -1,0 +1,3 @@
+companyCode;fiscalYear;fiscalPeriod;sequence;generalLedger;vessel;textStr;occurrenceDate;slipNo;slipDetailNo;domesticCurrencyAmount;resultMessage;createUser;createDate;createPGM;updateUser;updateDate;updatePGM;deleteFlg;
+1000;2023;10;1234567890;7099147000;K8Q;未収未払見積SEQ001;2023-11-01;A0000001;001;444444;個船判断で籍船をFに設定しました。;RIYO;2023-06-06 05:05:44;TNF0001;RIYO;2023-06-06 05:05:44;TNF0001;false;
+1000;2023;10;1234567891;7099147000;K8Q;未収未払見積XXXXXXXXXX;2023-11-01;A0000001;002;444444;個船判断で籍船をFに設定しました。;RIYO;2023-06-06 05:05:44;TNF0001;RIYO;2023-06-06 05:05:44;TNF0001;false;
