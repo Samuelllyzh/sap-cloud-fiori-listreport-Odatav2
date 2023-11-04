@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="MasterService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="MASTER_001" EntityType="MasterService.MASTER_001"/>
+                <EntitySet Name="Statuses" EntityType="MasterService.Statuses"/>
+            </EntityContainer>
+            <EntityType Name="MASTER_001">
+                <Key>
+                    <PropertyRef Name="companyCode"/>
+                    <PropertyRef Name="fiscalYear"/>
+                    <PropertyRef Name="fiscalPeriod"/>
+                    <PropertyRef Name="sequence"/>
+                    <PropertyRef Name="generalLedger"/>
+                    <PropertyRef Name="vessel"/>
+                </Key>
+                <Property Name="companyCode" Type="Edm.String" Nullable="false"/>
+                <Property Name="fiscalYear" Type="Edm.String" Nullable="false"/>
+                <Property Name="fiscalPeriod" Type="Edm.String" Nullable="false"/>
+                <Property Name="sequence" Type="Edm.String" Nullable="false"/>
+                <Property Name="generalLedger" Type="Edm.String" Nullable="false"/>
+                <Property Name="vessel" Type="Edm.String" Nullable="false"/>
+                <Property Name="textStr" Type="Edm.String"/>
+                <Property Name="occurrenceDate" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="slipNo" Type="Edm.String"/>
+                <Property Name="slipDetailNo" Type="Edm.String"/>
+                <Property Name="domesticCurrencyAmount" Type="Edm.Decimal" sap:variable-scale="true"/>
+                <Property Name="resultMessage" Type="Edm.String"/>
+                <Property Name="createUser" Type="Edm.String"/>
+                <Property Name="createDate" Type="Edm.DateTimeOffset"/>
+                <Property Name="createPGM" Type="Edm.String"/>
+                <Property Name="updateUser" Type="Edm.String"/>
+                <Property Name="updateDate" Type="Edm.DateTimeOffset"/>
+                <Property Name="updatePGM" Type="Edm.String"/>
+                <Property Name="deleteFlg" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="Statuses">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="text" Type="Edm.String"/>
+            </EntityType>
+            <Annotations Target="MasterService.MASTER_001" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>companyCode</PropertyPath>
+                        <PropertyPath>fiscalYear</PropertyPath>
+                        <PropertyPath>fiscalPeriod</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="companyCode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="fiscalYear"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="fiscalPeriod"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="sequence"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="generalLedger"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="vessel"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="textStr"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="occurrenceDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="slipNo"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="slipNo"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="slipDetailNo"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="domesticCurrencyAmount"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="createUser"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="createDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="createPGM"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="updateUser"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="updateDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="updatePGM"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Details">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="companyCode"/>
+                                    <PropertyValue Property="Label" String="会社コード"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="fiscalYear"/>
+                                    <PropertyValue Property="Label" String="会計年度"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="fiscalPeriod"/>
+                                    <PropertyValue Property="Label" String="会計期間"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="sequence"/>
+                                    <PropertyValue Property="Label" String="シーケンス番号"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="generalLedger"/>
+                                    <PropertyValue Property="Label" String="総勘定元帳勘定"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="vessel"/>
+                                    <PropertyValue Property="Label" String="VESSEL"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="textStr"/>
+                                    <PropertyValue Property="Label" String="明細テキスト"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="occurrenceDate"/>
+                                    <PropertyValue Property="Label" String="発生年月日"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="slipNo"/>
+                                    <PropertyValue Property="Label" String="会計伝票番号"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="slipDetailNo"/>
+                                    <PropertyValue Property="Label" String="会計伝票内の明細番号"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="domesticCurrencyAmount"/>
+                                    <PropertyValue Property="Label" String="国内通貨額"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="resultMessage"/>
+                                    <PropertyValue Property="Label" String="処理結果メッセージ"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID" String="ProjectsDetails"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Details"/>
+                            <PropertyValue Property="Label" String="データ登録"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="MasterService.EntityContainer/MASTER_001" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.SearchRestrictions">
+                    <Record Type="Capabilities.SearchRestrictionsType">
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/companyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="会社コード"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/fiscalYear" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="会計年度"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/fiscalPeriod" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="会計期間"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/sequence" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="シーケンス番号"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/generalLedger" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="総勘定元帳勘定"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/vessel" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="VESSEL"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/textStr" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="明細テキスト"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/occurrenceDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="発生年月日"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/slipNo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="会計伝票番号"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/slipDetailNo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="会計伝票内の明細番号"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/domesticCurrencyAmount" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="国内通貨額"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/resultMessage" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="処理結果メッセージ"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/createUser" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="作成者"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/createDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="作成日時"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/createPGM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="作成プログラムID"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/updateUser" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="最終更新者"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/updateDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="最終更新日時"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/updatePGM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="最終更新プログラムID"/>
+            </Annotations>
+            <Annotations Target="MasterService.MASTER_001/deleteFlg" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+                <Annotation Term="Common.Label" String="削除フラグ"/>
+            </Annotations>
+            <Annotations Target="MasterService.EntityContainer/Statuses" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
