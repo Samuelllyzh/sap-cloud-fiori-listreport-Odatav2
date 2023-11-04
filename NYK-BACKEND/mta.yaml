@@ -1,11 +1,11 @@
 _schema-version: '3.1'
-ID: NYK-BACKEND
+ID: listreport-backend
 version: 1.0.0-SNAPSHOT
 description: "A simple CAP project."
 parameters:
   enable-parallel-deployments: true
 modules:
-  - name: NYK-BACKEND-srv
+  - name: listreport-backend-srv
     type: java
     path: srv
     parameters:
@@ -24,13 +24,13 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      - name: NYK-BACKEND-auth
+      - name: listreport-backend-auth
       - name: app-api
         properties:
           CDS_MULTITENANCY_APPUI_URL: ~{url}
-      - name: test-hana
+      - name: listreport_hana
 
-  - name: NYK-BACKEND
+  - name: listreport-backend
     type: approuter.nodejs
     path: app/
     parameters:
@@ -44,22 +44,22 @@ modules:
           name: srv-api # must be used in xs-app.json as well
           url: ~{srv-url}
           forwardAuthToken: true
-      - name: NYK-BACKEND-auth
+      - name: listreport-backend-auth
     provides:
       - name: app-api
         properties:
           url: ${default-url}
 
 resources:
-  - name: NYK-BACKEND-auth
+  - name: listreport-backend-auth
     type: org.cloudfoundry.managed-service
     parameters:
       service: xsuaa
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: NYK-BACKEND-${org}-${space}
+        xsappname: listreport-backend-${org}-${space}
         tenant-mode: dedicated
 
-  - name: test-hana
+  - name: listreport_hana
     type: org.cloudfoundry.existing-service

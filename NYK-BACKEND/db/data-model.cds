@@ -38,12 +38,4 @@ entity MASTER {
   //削除フラグ
   deleteFlg       :Boolean @UI.Hidden;
 
-  // statusHelp : Association to Statuses;
-  // statusDropDown : Association to Statuses;
-}
-
-@cds.odata.valuelist
-entity Statuses {
-  key ID : Integer;
-  text   : String;
 }

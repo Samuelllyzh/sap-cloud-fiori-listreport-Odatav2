@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>customer</groupId>
-	<artifactId>NYK-BACKEND-parent</artifactId>
+	<artifactId>listreport-backend-parent</artifactId>
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
-	<name>NYK-BACKEND parent</name>
+	<name>listreport-backend parent</name>
 
 	<properties>
 		<!-- OUR VERSION -->

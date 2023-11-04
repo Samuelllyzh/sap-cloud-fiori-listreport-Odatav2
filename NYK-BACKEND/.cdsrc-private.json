@@ -7,8 +7,8 @@
           "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
           "org": "dd261829trial",
           "space": "dev",
-          "instance": "test-hana",
-          "key": "test-hana-key",
+          "instance": "listreport_hana",
+          "key": "listreport_hana-key",
           "resolved": false
         },
         "kind": "hana",

@@ -1,4 +1,4 @@
-package customer.nyk_backend;
+package customer.listreport_backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,9 +1,9 @@
 {"folders":[
         {
-            "path": "NYK-PROJECT"
+            "path": "listreport-PROJECT"
         },
         {
-            "name": "NYK-BACKEND",
-            "path": "NYK-BACKEND"
+            "name": "listreport-backend",
+            "path": "listreport-backend"
         }
     ],"settings":{}}

@@ -1,4 +1,4 @@
-package customer.nyk_backend.config;
+package customer.listreport_backend.config;
 
 import org.springframework.boot.autoconfigure.security.reactive.*;
 import org.springframework.context.annotation.Bean;
