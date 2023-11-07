@@ -1,0 +1,41 @@
+{
+    "fileName": "id_1699346321869_2212_propertyBindingChange",
+    "fileType": "change",
+    "changeType": "propertyChange",
+    "moduleName": "",
+    "reference": "masterfrontend",
+    "packageName": "",
+    "content": {
+        "property": "showHeaderContent",
+        "newValue": false
+    },
+    "selector": {
+        "id": "masterfrontend::sap.suite.ui.generic.template.ObjectPage.view.Details::MASTER--objectPage",
+        "idIsLocal": false,
+        "type": "sap.uxap.ObjectPageLayout"
+    },
+    "layer": "CUSTOMER_BASE",
+    "texts": {},
+    "namespace": "apps/masterfrontend/changes/",
+    "projectId": "",
+    "creation": 1699346594908,
+    "originalLanguage": "",
+    "support": {
+        "generator": "changeUtils: SAPFioriTools",
+        "service": "",
+        "user": "",
+        "sapui5Version": "1.120.0",
+        "sourceChangeFileName": "",
+        "compositeCommand": ""
+    },
+    "oDataInformation": {},
+    "dependentSelector": {},
+    "validAppVersions": {
+        "from": "0.0.1",
+        "to": "0.0.1",
+        "creation": "0.0.1"
+    },
+    "jsOnly": false,
+    "variantReference": "",
+    "appDescriptorChange": false
+}

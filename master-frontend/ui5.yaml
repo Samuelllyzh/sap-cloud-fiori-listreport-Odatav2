@@ -16,8 +16,9 @@ server:
             - /test-resources
           url: https://ui5.sap.com
         backend:
-          - path: /odata
-            url: https://dd261829trial-dev-nyk-backend-srv.cfapps.us10-001.hana.ondemand.com
+          - path: /v2
+            url: https://dd261829trial-dev-master-backend-srv.cfapps.us10-001.hana.ondemand.com
+            destination: NYKBACKEND
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

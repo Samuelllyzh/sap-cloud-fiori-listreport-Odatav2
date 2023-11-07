@@ -10,4 +10,3 @@ sap.ui.define(
         });
     }
 );
-//# sourceMappingURL=Component.js.map

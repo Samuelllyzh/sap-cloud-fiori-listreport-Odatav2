@@ -29,14 +29,15 @@ server:
       configuration:
         ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
         backend:
-          - path: /odata
-            url: https://dd261829trial-dev-nyk-backend-srv.cfapps.us10-001.hana.ondemand.com
+          - path: /v2
+            url: https://dd261829trial-dev-master-backend-srv.cfapps.us10-001.hana.ondemand.com
+            destination: NYKBACKEND
     - name: sap-fe-mockserver
       beforeMiddleware: csp
       configuration:
         mountPath: /
         services:
-          - urlPath: /odata/v2/MasterService
+          - urlPath: /v2/odata/v4/catalog
             metadataPath: ./webapp/localService/metadata.xml
             mockdataPath: ./webapp/localService/data
             generateMockData: true

@@ -1,22 +1,22 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Sat Nov 04 2023 14:39:36 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Mon Nov 06 2023 07:32:05 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.11.3|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V2|
-|**Service Type**<br>OData Url|
-|**Service URL**<br>https://dd261829trial-dev-nyk-backend-srv.cfapps.us10-001.hana.ondemand.com/odata/v2/MasterService/
+|**Service Type**<br>SAP System (ABAP On Premise)|
+|**Service URL**<br>https://dd261829trial-dev-master-backend-srv.cfapps.us10-001.hana.ondemand.com/v2/odata/v4/catalog
 |**Module Name**<br>master-frontend|
-|**Application Title**<br>App Title|
+|**Application Title**<br>按分エラー照会画面|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.120.0|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
-|**Main Entity**<br>MASTER_001|
+|**Main Entity**<br>MASTER|
 
 ## master-frontend
 
