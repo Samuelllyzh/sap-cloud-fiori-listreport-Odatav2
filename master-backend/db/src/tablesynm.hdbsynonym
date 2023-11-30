@@ -1,0 +1,20 @@
+{
+    "BOOKS": {
+        "target": {
+            "object": "BOOKS",
+            "schema": "CAPDB_SCHEMA_001"
+        }
+    },
+    "MASTER": {
+        "target": {
+            "object": "MASTER",
+            "schema": "CAPDB_SCHEMA_001"
+        }
+    },
+    "MASTER_001": {
+        "target": {
+            "object": "MASTER_001",
+            "schema": "CAPDB_SCHEMA_001"
+        }
+    }
+}
