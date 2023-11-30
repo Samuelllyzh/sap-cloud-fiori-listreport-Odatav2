@@ -22,6 +22,7 @@ annotate CatalogService.MASTER with {
     updateDate             @title: '最終更新日時';
     updatePGM              @title: '最終更新プログラムID';
     deleteFlg              @title: '削除フラグ';
+    LIMITTIME @title : 'リミットタイム';
 
 // statusHelp             @(
 //     title : 'Status with Help',
@@ -55,7 +56,8 @@ annotate CatalogService.MASTER with @(UI: {
     SelectionFields       : [
         companyCode,
         fiscalYear,
-        fiscalPeriod
+        fiscalPeriod,
+        LIMITTIME
     ],
     // 一覧項目
     LineItem              : [
@@ -77,6 +79,7 @@ annotate CatalogService.MASTER with @(UI: {
         {Value: updateUser},
         {Value: updateDate},
         {Value: updatePGM},
+        {Value: LIMITTIME}
     ],
     // ObjectPageの定義
     FieldGroup #UpdateInfo: {
@@ -237,6 +240,10 @@ annotate CatalogService.MASTER with @(
     Capabilities.DeleteRestrictions: {Deletable: true},
     Capabilities.UpdateRestrictions: {Updatable: true}
 );
+
+// annotate CatalogService.MASTER with @(UI: {
+//     Hidden: true
+// }) when $action == 'copy';
 
 //annotate CatalogService.MASTER with @fiori.draft.enabled;
 

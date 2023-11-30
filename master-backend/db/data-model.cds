@@ -2,6 +2,7 @@ entity Tooks {
   key ID    : Integer;
       title : String;
       stock : Integer;
+      TIMESTR: Time;
 }
 
 @cds.persistence.exists
@@ -78,7 +79,7 @@ entity MASTER {
       // 発生年月日
       occurrenceDate         : Date;
       // 会計伝票番号
-      slipNo                 : String(10);
+      slipNo                 : Time;
 
       // 会計伝票内の明細番号
       slipDetailNo           : String(3);
@@ -111,6 +112,7 @@ entity MASTER {
       //削除フラグ
       deleteFlg              : Boolean;
 
+        LIMITTIME :Time;
 // statusHelp : Association to Statuses;
 // statusDropDown : Association to Statuses;
 }

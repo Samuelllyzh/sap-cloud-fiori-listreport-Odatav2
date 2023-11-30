@@ -33,6 +33,7 @@
 <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
 <Property Name="title" Type="Edm.String"/>
 <Property Name="stock" Type="Edm.Int32"/>
+<Property Name="TIMESTR" Type="Edm.Time"/>
 </EntityType>
 <EntityType Name="MASTER">
 <Key>
@@ -53,7 +54,7 @@
 <Property Name="vessel" Type="Edm.String" MaxLength="3" Nullable="false"/>
 <Property Name="textStr" Type="Edm.String" MaxLength="50"/>
 <Property Name="occurrenceDate" Type="Edm.DateTime" sap:display-format="Date"/>
-<Property Name="slipNo" Type="Edm.String" MaxLength="10"/>
+<Property Name="slipNo" Type="Edm.Time"/>
 <Property Name="slipDetailNo" Type="Edm.String" MaxLength="3"/>
 <Property Name="domesticCurrencyAmount" Type="Edm.Decimal" Precision="17"/>
 <Property Name="resultMessage" Type="Edm.String" MaxLength="255"/>
@@ -64,6 +65,7 @@
 <Property Name="updateDate" Type="Edm.DateTimeOffset" Precision="7"/>
 <Property Name="updatePGM" Type="Edm.String" MaxLength="255"/>
 <Property Name="deleteFlg" Type="Edm.Boolean"/>
+<Property Name="LIMITTIME" Type="Edm.Time"/>
 </EntityType>
 <EntityType Name="MASTER_001">
 <Key>
@@ -110,6 +112,7 @@
 <PropertyPath>companyCode</PropertyPath>
 <PropertyPath>fiscalYear</PropertyPath>
 <PropertyPath>fiscalPeriod</PropertyPath>
+<PropertyPath>LIMITTIME</PropertyPath>
 </Collection>
 </Annotation>
 <Annotation Term="UI.LineItem">
@@ -167,6 +170,9 @@
 </Record>
 <Record Type="UI.DataField">
 <PropertyValue Property="Value" Path="updatePGM"/>
+</Record>
+<Record Type="UI.DataField">
+<PropertyValue Property="Value" Path="LIMITTIME"/>
 </Record>
 </Collection>
 </Annotation>
@@ -379,26 +385,34 @@
 <Annotation Term="Common.Label" String="処理結果メッセージ"/>
 </Annotations>
 <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.MASTER/createUser">
+<Annotation Term="Core.Computed" Bool="true"/>
 <Annotation Term="Common.Label" String="作成者"/>
 </Annotations>
 <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.MASTER/createDate">
+<Annotation Term="Core.Computed" Bool="true"/>
 <Annotation Term="Common.Label" String="作成日時"/>
 </Annotations>
 <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.MASTER/createPGM">
+<Annotation Term="Core.Computed" Bool="true"/>
 <Annotation Term="Common.Label" String="作成プログラムID"/>
 </Annotations>
 <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.MASTER/updateUser">
+<Annotation Term="Core.Computed" Bool="true"/>
 <Annotation Term="Common.Label" String="最終更新者"/>
 </Annotations>
 <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.MASTER/updateDate">
+<Annotation Term="Core.Computed" Bool="true"/>
 <Annotation Term="Common.Label" String="最終更新日時"/>
 </Annotations>
 <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.MASTER/updatePGM">
+<Annotation Term="Core.Computed" Bool="true"/>
 <Annotation Term="Common.Label" String="最終更新プログラムID"/>
 </Annotations>
 <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.MASTER/deleteFlg">
-<Annotation Term="UI.Hidden" Bool="true"/>
 <Annotation Term="Common.Label" String="削除フラグ"/>
+</Annotations>
+<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.MASTER/LIMITTIME">
+<Annotation Term="Common.Label" String="リミットタイム"/>
 </Annotations>
 </Schema>
 </edmx:DataServices>
