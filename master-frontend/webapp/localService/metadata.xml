@@ -104,9 +104,9 @@
 </Annotation>
 </Annotations>
 <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.MASTER">
-<Annotation Term="UI.UpdateHidden" Bool="false"/>
-<Annotation Term="UI.CreateHidden" Bool="false"/>
-<Annotation Term="UI.DeleteHidden" Bool="false"/>
+<Annotation Term="UI.UpdateHidden" Bool="true"/>
+<Annotation Term="UI.CreateHidden" Bool="true"/>
+<Annotation Term="UI.DeleteHidden" Bool="true"/>
 <Annotation Term="UI.SelectionFields">
 <Collection>
 <PropertyPath>companyCode</PropertyPath>
@@ -304,9 +304,9 @@
 </Annotation>
 </Annotations>
 <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CatalogService.EntityContainer/MASTER">
-<Annotation Term="UI.UpdateHidden" Bool="false"/>
-<Annotation Term="UI.CreateHidden" Bool="false"/>
-<Annotation Term="UI.DeleteHidden" Bool="false"/>
+<Annotation Term="UI.UpdateHidden" Bool="true"/>
+<Annotation Term="UI.CreateHidden" Bool="true"/>
+<Annotation Term="UI.DeleteHidden" Bool="true"/>
 <Annotation Term="Capabilities.InsertRestrictions">
 <Record Type="Capabilities.InsertRestrictionsType">
 <PropertyValue Property="Insertable" Bool="true"/>
@@ -314,7 +314,7 @@
 </Annotation>
 <Annotation Term="Capabilities.DeleteRestrictions">
 <Record Type="Capabilities.DeleteRestrictionsType">
-<PropertyValue Property="Deletable" Bool="true"/>
+<PropertyValue Property="Deletable" Bool="false"/>
 </Record>
 </Annotation>
 <Annotation Term="Capabilities.UpdateRestrictions">

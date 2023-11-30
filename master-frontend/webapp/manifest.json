@@ -137,7 +137,13 @@
                         },
                         "dataLoadSettings": {
                             "loadDataOnAppLaunch": ""
-                        }
+                        },
+                        "tableSettings": {
+                            "multiSelect": true,
+                            "selectAll": false
+                        },
+                        "variantManagementHidden": true,
+                        "subTitleIfVariantMgmtHidden": " "
                     }
                 },
                 "pages": {

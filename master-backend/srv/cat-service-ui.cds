@@ -49,9 +49,9 @@ annotate CatalogService.MASTER with {
 
 // 表示項目
 annotate CatalogService.MASTER with @(UI: {
-    UpdateHidden          : false,
-    CreateHidden          : false,
-    DeleteHidden          : false,
+    UpdateHidden          : true,
+    CreateHidden          : true,
+    DeleteHidden          : true,
     // 検索条件
     SelectionFields       : [
         companyCode,
@@ -237,7 +237,7 @@ annotate CatalogService.MASTER with @(UI: {
 // 一覧ボタン制御
 annotate CatalogService.MASTER with @(
     Capabilities.InsertRestrictions: {Insertable: true},
-    Capabilities.DeleteRestrictions: {Deletable: true},
+    Capabilities.DeleteRestrictions: {Deletable: false},
     Capabilities.UpdateRestrictions: {Updatable: true}
 );
 
