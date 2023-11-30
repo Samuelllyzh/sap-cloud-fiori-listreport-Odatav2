@@ -237,7 +237,7 @@ annotate CatalogService.MASTER with @(UI: {
 // 一覧ボタン制御
 annotate CatalogService.MASTER with @(
     Capabilities.InsertRestrictions: {Insertable: true},
-    Capabilities.DeleteRestrictions: {Deletable: false},
+    Capabilities.DeleteRestrictions: {Deletable: true},
     Capabilities.UpdateRestrictions: {Updatable: true}
 );
 
