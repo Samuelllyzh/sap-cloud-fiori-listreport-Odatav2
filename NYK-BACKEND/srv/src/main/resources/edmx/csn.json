@@ -1,0 +1,78 @@
+{
+  "definitions": {
+    "MASTER": {
+      "kind": "entity",
+      "elements": {
+        "companyCode": {
+          "key": true,
+          "type": "cds.String"
+        },
+        "fiscalYear": {
+          "key": true,
+          "type": "cds.String"
+        },
+        "fiscalPeriod": {
+          "key": true,
+          "type": "cds.String"
+        },
+        "sequence": {
+          "key": true,
+          "type": "cds.String"
+        },
+        "generalLedger": {
+          "key": true,
+          "type": "cds.String"
+        },
+        "vessel": {
+          "key": true,
+          "type": "cds.String"
+        },
+        "textStr": {
+          "type": "cds.String"
+        },
+        "occurrenceDate": {
+          "type": "cds.Date"
+        },
+        "slipNo": {
+          "type": "cds.String"
+        },
+        "slipDetailNo": {
+          "type": "cds.String"
+        },
+        "domesticCurrencyAmount": {
+          "type": "cds.Decimal"
+        },
+        "resultMessage": {
+          "type": "cds.String"
+        },
+        "createUser": {
+          "type": "cds.String"
+        },
+        "createDate": {
+          "type": "cds.DateTime"
+        },
+        "createPGM": {
+          "type": "cds.String"
+        },
+        "updateUser": {
+          "type": "cds.String"
+        },
+        "updateDate": {
+          "type": "cds.DateTime"
+        },
+        "updatePGM": {
+          "type": "cds.String"
+        },
+        "deleteFlg": {
+          "@UI.Hidden": true,
+          "type": "cds.Boolean"
+        }
+      }
+    }
+  },
+  "$version": "2.0",
+  "meta": {
+    "creator": "CDS Compiler v4.2.2",
+    "flavor": "inferred"
+  }
+}
